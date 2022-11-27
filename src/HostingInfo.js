@@ -7,7 +7,7 @@ export default function HostingInfo() {
     <div className="HostingInfo">
       <small className="hosting">
         <a
-          href="https://github.com/IfiZa/weather-app-iz"
+          href="https://github.com/IfiZa/weather-react"
           target="_blank"
           rel="noreferrer"
         >
