@@ -7,13 +7,12 @@ export default function Forecast() {
     <div className="Forecast">
       <h3>Next 6 days</h3>
       <div className="weather-forecast">
-        <div className="icon-forecast"></div>
         <div class="col">
           <div class="card text-center border-light mb-3 h-100 opacity-85">
             <div class="card-body">
-              <h5 class="card-next-day">Sun 07/08</h5>
+              <h5 class="card-next-day">Sun 10/11</h5>
               <img
-                src="images\icons\cloud.png"
+                src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
                 class="card-img-top"
                 alt="Cloudy"
               />
@@ -24,11 +23,11 @@ export default function Forecast() {
         <div class="col">
           <div class="card text-center border-light mb-3 h-100 opacity-85">
             <div class="card-body">
-              <h5 class="card-next-day">Mon 08/08</h5>
+              <h5 class="card-next-day">Mon 11/11</h5>
               <img
-                src="images\icons\clear-sky.png"
+                src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
                 class="card-img-top"
-                alt="Clear Sky"
+                alt="Cloudy"
               />
               <p class="card-next-day-MinMax">15°C / 25°C</p>
             </div>
@@ -37,11 +36,11 @@ export default function Forecast() {
         <div class="col">
           <div class="card text-center border-light mb-3 h-100 opacity-85">
             <div class="card-body">
-              <h5 class="card-next-day">Tue 09/08</h5>
+              <h5 class="card-next-day">Tue 12/11</h5>
               <img
-                src="images\icons\sunny.png"
+                src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
                 class="card-img-top"
-                alt="Sunny"
+                alt="Cloudy"
               />
               <p class="card-next-day-MinMax">18°C / 30°C</p>
             </div>
@@ -50,11 +49,11 @@ export default function Forecast() {
         <div class="col">
           <div class="card text-center border-light mb-3 h-100 opacity-85">
             <div class="card-body">
-              <h5 class="card-next-day">Wed 10/08</h5>
+              <h5 class="card-next-day">Wed 13/11</h5>
               <img
-                src="images\icons\sunny.png"
+                src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
                 class="card-img-top"
-                alt="Sunny"
+                alt="Cloudy"
               />
               <p class="card-next-day-MinMax">18°C / 30°C</p>
             </div>

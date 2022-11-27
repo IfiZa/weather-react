@@ -21,7 +21,6 @@ export default function App() {
           </div>
         </div>
         <hr />
-
         <Forecast />
       </div>
       <HostingInfo />

@@ -17,7 +17,7 @@ export default function Weather() {
         <div className="d-flex weather-temperature">
           <img
             src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
-            alt="Sunny"
+            alt="Cloudy"
             className="icon-current"
           />
           <div>
@@ -26,7 +26,7 @@ export default function Weather() {
           </div>
         </div>
         <ul>
-          <li className="weather-description">Sunny</li>
+          <li className="weather-description">Cloudy</li>
           <br />
           <li className="min-max-temp">Min 16°C / Max 28°C</li>
         </ul>
