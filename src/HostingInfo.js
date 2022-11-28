@@ -8,6 +8,7 @@ export default function HostingInfo() {
       <small className="hosting">
         <a
           href="https://github.com/IfiZa/weather-react"
+          alt="Github repository link"
           target="_blank"
           rel="noreferrer"
         >
