@@ -12,7 +12,7 @@ export default function Weather() {
         </h1>
         <small>
           {" "}
-          Last updated: <span>Wed 09 Nov 2022, 16:23</span>{" "}
+          Last updated: <span>Wed 30 Nov 2022, 16:23</span>{" "}
         </small>
         <div className="d-flex weather-temperature">
           <img
