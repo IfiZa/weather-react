@@ -46,15 +46,3 @@ ul {
   text-transform: capitalize;
   line-height: 1.5;
 }
-
-.card-img-top {
-  display: block;
-  margin: 10px auto;
-  width: 50px;
-}
-.card-next-day-MinMax {
-  font-size: 12px;
-  font-weight: 700;
-  margin: 0 auto;
-  padding-top: 10px;
-}
