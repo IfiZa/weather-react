@@ -24,3 +24,23 @@ small {
   max-width: 750px;
   margin: 50px auto;
 }
+
+h3 {
+  font-size: 12px;
+  font-weight: 600;
+  padding-left: 10px;
+}
+
+.hostingInfo {
+  font-size: 12px;
+  text-align: center;
+}
+.vector-source {
+  text-decoration: none;
+  color: black;
+}
+
+.vector-source:hover {
+  text-decoration: underline;
+  color: black;
+}

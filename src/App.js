@@ -1,29 +1,39 @@
 import React from "react";
 import Weather from "./Weather.js";
-import ExtraData from "./ExtraData.js";
-import SearchCity from "./SearchCity.js";
 import Forecast from "./Forecast.js";
-import HostingInfo from "./HostingInfo.js";
 
 import "./App.css";
 
-export default function App() {
+export default function App(props) {
   return (
     <div className="App">
       <div className="container">
-        <div className="row row-cols-1 row-cols-sm-2 g-2">
-          <div className="col">
-            <Weather defaultCity="Athens" />
-          </div>
-          <div className="col">
-            <ExtraData />
-            <SearchCity />
-          </div>
-        </div>
+        <Weather defaultCity="Athens" />
         <hr />
         <Forecast />
       </div>
-      <HostingInfo />
+
+      <div className="hostingInfo">
+        <a
+          href="https://github.com/IfiZa/weather-react"
+          alt="Github repository link"
+          target="_blank"
+          rel="noreferrer"
+        >
+          GitHub open source code{" "}
+        </a>
+        by IfiZamb <br />
+        Doodle vector by{" "}
+        <a
+          href="https://www.freepik.com/author/rawpixel-com"
+          target="_blank"
+          alt="Author link"
+          className="vector-source"
+          rel="noreferrer"
+        >
+          Rawpixel
+        </a>
+      </div>
     </div>
   );
 }

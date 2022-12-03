@@ -2,7 +2,7 @@ import React from "react";
 
 import "./ExtraData.css";
 
-export default function ExtraData() {
+export default function ExtraData(props) {
   return (
     <div className="ExtraData">
       <div className="card p-3 mb-2">

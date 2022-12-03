@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
+import ExtraData from "./ExtraData.js";
+import SearchCity from "./SearchCity.js";
 
 import "./Weather.css";
 
@@ -18,6 +20,7 @@ export default function Weather(props) {
       description: response.data.weather[0].description,
       tempMin: Math.round(response.data.main.temp_min),
       tempMax: Math.round(response.data.main.temp_max),
+      realFeel: Math.round(response.data.main.feels_like),
     });
 
     setReady(true);
@@ -26,33 +29,45 @@ export default function Weather(props) {
   if (ready) {
     return (
       <div className="Weather">
-        <div className="card p-3 h-100">
-          <h1>
-            <span className="city">{weatherData.city}</span>
-            <span className="country">{weatherData.country}</span>
-          </h1>
-          <small>
-            {" "}
-            Last updated: <span>{weatherData.date}</span>{" "}
-          </small>
-          <div className="d-flex weather-temperature">
-            <img
-              src={weatherData.icon}
-              alt={weatherData.description}
-              className="icon-current"
-            />
-            <div>
-              <strong className="temperature">{weatherData.temperature}</strong>
-              <span className="unit"> °C</span>
+        <div className="row row-cols-1 row-cols-sm-2 g-2">
+          <div className="col">
+            <div className="card p-3 h-100">
+              <h1>
+                <span className="city">{weatherData.city}</span>
+                <span className="country">{weatherData.country}</span>
+              </h1>
+              <small>
+                {" "}
+                Last updated: <span>{weatherData.date}</span>{" "}
+              </small>
+              <div className="d-flex weather-temperature">
+                <img
+                  src={weatherData.icon}
+                  alt={weatherData.description}
+                  className="icon-current"
+                />
+                <div>
+                  <strong className="temperature">
+                    {weatherData.temperature}
+                  </strong>
+                  <span className="unit"> °C</span>
+                </div>
+              </div>
+              <ul>
+                <li className="weather-description">
+                  {weatherData.description}
+                </li>
+                <br />
+                <li className="min-max-temp">
+                  Min {weatherData.tempMin}°C / Max {weatherData.tempMax}°C
+                </li>
+              </ul>
             </div>
           </div>
-          <ul>
-            <li className="weather-description">{weatherData.description}</li>
-            <br />
-            <li className="min-max-temp">
-              Min {weatherData.tempMin}°C / Max {weatherData.tempMax}°C
-            </li>
-          </ul>
+          <div className="col">
+            <ExtraData />
+            <SearchCity />
+          </div>
         </div>
       </div>
     );
