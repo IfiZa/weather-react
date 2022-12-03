@@ -12,7 +12,9 @@ export default function Weather(props) {
     setWeatherData({
       city: response.data.name,
       country: response.data.sys.country,
+      date: "Wed 30 Nov 2022, 16:23",
       temperature: Math.round(response.data.main.temp),
+      icon: "https://ssl.gstatic.com/onebox/weather/64/cloudy.png",
       description: response.data.weather[0].description,
       tempMin: Math.round(response.data.main.temp_min),
       tempMax: Math.round(response.data.main.temp_max),
@@ -31,12 +33,12 @@ export default function Weather(props) {
           </h1>
           <small>
             {" "}
-            Last updated: <span>Wed 30 Nov 2022, 16:23</span>{" "}
+            Last updated: <span>{weatherData.date}</span>{" "}
           </small>
           <div className="d-flex weather-temperature">
             <img
-              src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
-              alt="Cloudy"
+              src={weatherData.icon}
+              alt={weatherData.description}
               className="icon-current"
             />
             <div>
@@ -59,6 +61,7 @@ export default function Weather(props) {
     const city = "Athens";
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
+
     return "Loading...";
   }
 }
