@@ -5,7 +5,6 @@ import "./Forecast.css";
 export default function Forecast() {
   return (
     <div className="Forecast">
-      <h3>Next 6 days</h3>
       <div className="weather-forecast">
         <div className="row row-cols-2 row-cols-sm-3 row-cols-md-6 g-2">
           <div className="col">
