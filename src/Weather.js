@@ -10,7 +10,6 @@ export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({});
 
   function handleResponse(response) {
-    console.log(response.data);
     setWeatherData({
       city: response.data.name,
       country: response.data.sys.country,
@@ -21,6 +20,9 @@ export default function Weather(props) {
       tempMin: Math.round(response.data.main.temp_min),
       tempMax: Math.round(response.data.main.temp_max),
       realFeel: Math.round(response.data.main.feels_like),
+      humidity: Math.round(response.data.main.humidity),
+      wind: Math.round(response.data.wind.speed),
+      pressure: Math.round(response.data.main.pressure),
     });
 
     setReady(true);
@@ -31,7 +33,7 @@ export default function Weather(props) {
       <div className="Weather">
         <div className="row row-cols-1 row-cols-sm-2 g-2">
           <div className="col">
-            <div className="card p-3 h-100">
+            <div className="card p-3 h-100 weather-main">
               <h1>
                 <span className="city">{weatherData.city}</span>
                 <span className="country">{weatherData.country}</span>
@@ -44,7 +46,7 @@ export default function Weather(props) {
                 <img
                   src={weatherData.icon}
                   alt={weatherData.description}
-                  className="icon-current"
+                  className="icon-main"
                 />
                 <div>
                   <strong className="temperature">
@@ -65,7 +67,7 @@ export default function Weather(props) {
             </div>
           </div>
           <div className="col">
-            <ExtraData />
+            <ExtraData data={weatherData} />
             <SearchCity />
           </div>
         </div>
