@@ -19,6 +19,7 @@ ul {
 .country {
   font-size: small;
   position: relative;
+  margin-left: 5px;
   top: -15px;
 }
 
@@ -44,5 +45,4 @@ ul {
 
 .weather-description {
   text-transform: capitalize;
-  line-height: 1.5;
 }

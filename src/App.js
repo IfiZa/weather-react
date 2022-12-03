@@ -13,7 +13,7 @@ export default function App() {
       <div className="container">
         <div className="row row-cols-1 row-cols-sm-2 g-2">
           <div className="col">
-            <Weather />
+            <Weather defaultCity="Athens" />
           </div>
           <div className="col">
             <ExtraData />
