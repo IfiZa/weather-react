@@ -27,16 +27,6 @@ export default function ExtraData(props) {
             <br />
             <span className="pressure">{props.data.pressure} hPa</span>
           </div>
-          <div className="col">
-            Sunrise
-            <br />
-            <span className="sunrise">06:10</span>
-          </div>
-          <div className="col">
-            Sunset
-            <br />
-            <span className="sunset">20:59</span>
-          </div>
         </div>
       </div>
     </div>
