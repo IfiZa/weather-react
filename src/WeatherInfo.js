@@ -1,6 +1,8 @@
 import React from "react";
 import UpdatedDate from "./UpdatedDate.js";
 
+import "./WeatherInfo.css";
+
 export default function WeatherInfo(props) {
   return (
     <div className="WeatherInfo">
