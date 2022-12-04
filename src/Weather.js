@@ -24,8 +24,6 @@ export default function Weather(props) {
       humidity: Math.round(response.data.main.humidity),
       wind: Math.round(response.data.wind.speed),
       pressure: Math.round(response.data.main.pressure),
-      sunriseUnix: response.data.sys.sunrise * 1000,
-      sunsetUnix: response.data.sys.sunset * 1000,
     });
   }
 

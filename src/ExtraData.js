@@ -22,11 +22,6 @@ export default function ExtraData(props) {
             <br />
             <span className="wind">{props.data.wind} m/s</span>
           </div>
-          <div className="col">
-            Pressure
-            <br />
-            <span className="pressure">{props.data.pressure} hPa</span>
-          </div>
         </div>
       </div>
     </div>
