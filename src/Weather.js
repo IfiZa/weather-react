@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import UpdatedDate from "./UpdatedDate.js";
+import WeatherInfo from "./WeatherInfo.js";
 import ExtraData from "./ExtraData.js";
 import SearchCity from "./SearchCity.js";
 
@@ -34,35 +34,7 @@ export default function Weather(props) {
       <div className="Weather">
         <div className="row row-cols-1 row-cols-sm-2 g-2">
           <div className="col">
-            <div className="card p-3 h-100 weather-main">
-              <h1>
-                <span className="city">{weatherData.city}</span>
-                <span className="country">{weatherData.country}</span>
-              </h1>
-              <UpdatedDate date={weatherData.date} />
-              <div className="d-flex weather-temperature">
-                <img
-                  src={weatherData.icon}
-                  alt={weatherData.description}
-                  className="icon-main"
-                />
-                <div>
-                  <strong className="temperature">
-                    {weatherData.temperature}
-                  </strong>
-                  <span className="unit"> °C</span>
-                </div>
-              </div>
-              <ul>
-                <li className="weather-description">
-                  {weatherData.description}
-                </li>
-                <br />
-                <li className="min-max-temp">
-                  Min {weatherData.tempMin}°C / Max {weatherData.tempMax}°C
-                </li>
-              </ul>
-            </div>
+            <WeatherInfo data={weatherData} />
           </div>
           <div className="col">
             <ExtraData data={weatherData} />
