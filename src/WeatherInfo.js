@@ -18,13 +18,26 @@ export default function WeatherInfo(props) {
           <WeatherIcon code={props.data.icon} />
           <WeatherTemperature celsius={props.data.temperature} />
         </div>
-        <ul>
-          <li className="weather-description">{props.data.description}</li>
-          <br />
-          <li className="min-max-temp">
-            Min {props.data.tempMin}°C / Max {props.data.tempMax}°C
-          </li>
-        </ul>
+        <div className="row cols-2">
+          <ul className="col-6 col-md-7 ">
+            <li className="weather-description">{props.data.description}</li>
+            <br />
+            <li className="min-max-temp">
+              Min {props.data.tempMin}°C / Max {props.data.tempMax}°C
+            </li>
+          </ul>
+          <ul className="col-6 col-md-5">
+            <li className="humidity">
+              Humidity:
+              <span className="humidity">{props.data.humidity} %</span>
+            </li>
+            <br />
+            <li className="wind">
+              Wind:
+              <span className="humidity">{props.data.wind} m/s</span>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );

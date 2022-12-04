@@ -10,7 +10,7 @@ export default function App() {
       <div className="container">
         <Weather defaultCity="Athens" />
         <hr />
-        <h3>Next 6 days</h3>
+        <h3>Next 4 days</h3>
         <Forecast />
       </div>
 

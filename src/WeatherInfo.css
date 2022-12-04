@@ -11,6 +11,12 @@ ul {
   padding: 5px;
 }
 
+canvas {
+  display: block;
+  margin-right: 10px;
+  width: 70px;
+}
+
 .weather-main {
   border-radius: 5px;
   box-shadow: 5px 5px 5px rgb(116, 126, 119);
@@ -28,28 +34,27 @@ ul {
   margin-bottom: 20px;
 }
 
-canvas {
-  display: block;
-  margin-right: 15px;
-  width: 70px;
-}
-
 .temperature {
-  font-size: 40px;
+  font-size: 36px;
   padding: 15px 5px;
 }
 
 .unit {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   position: relative;
   top: -16px;
 }
 
-a {
+.unit a {
   text-decoration: none;
 }
 
 .weather-description {
   text-transform: capitalize;
+}
+
+.humidity,
+.wind {
+  margin-left: 10px;
 }

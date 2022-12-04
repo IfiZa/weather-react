@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo.js";
-import ExtraData from "./ExtraData.js";
 
 import "./Weather.css";
 
@@ -59,12 +58,11 @@ export default function Weather(props) {
   if (weatherData.ready) {
     return (
       <div className="Weather">
-        <div className="row row-cols-1 row-cols-sm-2 g-2">
+        <div className="row row-cols-1 g-2">
           <div className="col">
             <WeatherInfo data={weatherData} />
           </div>
           <div className="col">
-            <ExtraData data={weatherData} />
             <div className="SearchCity">
               <div className="card p-3">
                 <form onSubmit={handleSubmit}>
