@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import UpdatedDate from "./UpdatedDate.js";
 import ExtraData from "./ExtraData.js";
 import SearchCity from "./SearchCity.js";
 
@@ -13,7 +14,7 @@ export default function Weather(props) {
     setWeatherData({
       city: response.data.name,
       country: response.data.sys.country,
-      date: "Wed 30 Nov 2022, 16:23",
+      date: new Date(response.data.dt * 1000),
       temperature: Math.round(response.data.main.temp),
       icon: "https://ssl.gstatic.com/onebox/weather/64/cloudy.png",
       description: response.data.weather[0].description,
@@ -38,10 +39,7 @@ export default function Weather(props) {
                 <span className="city">{weatherData.city}</span>
                 <span className="country">{weatherData.country}</span>
               </h1>
-              <small>
-                {" "}
-                Last updated: <span>{weatherData.date}</span>{" "}
-              </small>
+              <UpdatedDate date={weatherData.date} />
               <div className="d-flex weather-temperature">
                 <img
                   src={weatherData.icon}
