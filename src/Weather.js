@@ -6,12 +6,12 @@ import ExtraData from "./ExtraData.js";
 import "./Weather.css";
 
 export default function Weather(props) {
-  const [ready, setReady] = useState(false);
-  const [weatherData, setWeatherData] = useState({});
+  const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response) {
     setWeatherData({
+      ready: true,
       city: response.data.name,
       country: response.data.sys.country,
       date: new Date(response.data.dt * 1000),
@@ -25,8 +25,6 @@ export default function Weather(props) {
       wind: Math.round(response.data.wind.speed),
       pressure: Math.round(response.data.main.pressure),
     });
-
-    setReady(true);
   }
 
   function search() {
@@ -58,7 +56,7 @@ export default function Weather(props) {
     navigator.geolocation.getCurrentPosition(retrieveCurrentPosition);
   }
 
-  if (ready) {
+  if (weatherData.ready) {
     return (
       <div className="Weather">
         <div className="row row-cols-1 row-cols-sm-2 g-2">
