@@ -1,5 +1,6 @@
 import React from "react";
 import UpdatedDate from "./UpdatedDate.js";
+import WeatherIcon from "./WeatherIcon.js";
 
 import "./WeatherInfo.css";
 
@@ -13,11 +14,7 @@ export default function WeatherInfo(props) {
         </h1>
         <UpdatedDate date={props.data.date} />
         <div className="d-flex weather-temperature">
-          <img
-            src={props.data.icon}
-            alt={props.data.description}
-            className="icon-main"
-          />
+          <WeatherIcon code={props.data.icon} />
           <div>
             <strong className="temperature">{props.data.temperature}</strong>
             <span className="unit"> °C</span>
