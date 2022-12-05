@@ -12,9 +12,7 @@ ul {
 }
 
 canvas {
-  display: block;
   margin-right: 10px;
-  width: 70px;
 }
 
 .weather-main {

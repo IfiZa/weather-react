@@ -1,4 +1,5 @@
 import React from "react";
+import WeatherIcon from "./WeatherIcon.js";
 
 import "./WeatherForecast.css";
 
@@ -11,11 +12,7 @@ export default function WeatherForecast() {
             <div className="card text-center border-light mb-3 h-100 opacity-85">
               <div className="card-body">
                 <h5 className="card-next-day">Thu 01/12</h5>
-                <img
-                  src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
-                  className="card-img-top"
-                  alt="Cloudy"
-                />
+                <WeatherIcon code="01d" size={40} />
                 <p className="card-next-day-MinMax">15°C / 24°C</p>
               </div>
             </div>

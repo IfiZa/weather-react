@@ -15,11 +15,11 @@ export default function WeatherInfo(props) {
         </h1>
         <UpdatedDate date={props.data.date} />
         <div className="d-flex weather-temperature">
-          <WeatherIcon code={props.data.icon} />
+          <WeatherIcon code={props.data.icon} size={58} />
           <WeatherTemperature celsius={props.data.temperature} />
         </div>
         <div className="row cols-2">
-          <ul className="col-6 col-md-7 ">
+          <ul className="col-6 col-md-7">
             <li className="weather-description">{props.data.description}</li>
             <br />
             <li className="min-max-temp">
