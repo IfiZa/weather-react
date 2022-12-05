@@ -59,32 +59,29 @@ export default function Weather(props) {
   if (weatherData.ready) {
     return (
       <div className="Weather">
-        <div className="col">
-          <WeatherInfo data={weatherData} />
-        </div>
-        <div className="col SearchCity">
-          <div className="card p-3">
-            <form onSubmit={handleSubmit}>
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Type a city name"
-                autoFocus="on"
-                autoComplete="off"
-                onChange={handleCitySubmit}
-              />
-              <button type="submit" className="btn btn-light p-1 mt-2">
-                Search
-              </button>
-              <button
-                type="submit"
-                className="btn btn-light p-1 mt-2"
-                onClick={getCurrentLocation}
-              >
-                Current
-              </button>
-            </form>
-          </div>
+        <WeatherInfo data={weatherData} />
+
+        <div className="card p-3 SearchCity">
+          <form onSubmit={handleSubmit}>
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Type a city name"
+              autoFocus="on"
+              autoComplete="off"
+              onChange={handleCitySubmit}
+            />
+            <button type="submit" className="btn btn-light p-1 mt-2">
+              Search
+            </button>
+            <button
+              type="submit"
+              className="btn btn-light p-1 mt-2"
+              onClick={getCurrentLocation}
+            >
+              Current
+            </button>
+          </form>
         </div>
         <hr />
         <h3>Next 4 days</h3>

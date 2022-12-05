@@ -8,7 +8,7 @@ import "./WeatherInfo.css";
 export default function WeatherInfo(props) {
   return (
     <div className="WeatherInfo">
-      <div className="card p-3 h-100 weather-main">
+      <div className="card p-3 mb-2 weather-main">
         <h1>
           <span className="city">{props.data.city}</span>
           <span className="country">{props.data.country}</span>
