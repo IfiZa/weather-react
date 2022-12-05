@@ -1,6 +1,5 @@
 import React from "react";
 import Weather from "./Weather.js";
-import Forecast from "./Forecast.js";
 
 import "./App.css";
 
@@ -9,9 +8,6 @@ export default function App() {
     <div className="App">
       <div className="container">
         <Weather defaultCity="Athens" />
-        <hr />
-        <h3>Next 4 days</h3>
-        <Forecast />
       </div>
 
       <div className="hostingInfo">

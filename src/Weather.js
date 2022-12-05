@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo.js";
+import WeatherForecast from "./WeatherForecast.js";
 
 import "./Weather.css";
 
@@ -58,37 +59,36 @@ export default function Weather(props) {
   if (weatherData.ready) {
     return (
       <div className="Weather">
-        <div className="row row-cols-1 g-2">
-          <div className="col">
-            <WeatherInfo data={weatherData} />
-          </div>
-          <div className="col">
-            <div className="SearchCity">
-              <div className="card p-3">
-                <form onSubmit={handleSubmit}>
-                  <input
-                    type="text"
-                    className="form-control"
-                    placeholder="Type a city name"
-                    autoFocus="on"
-                    autoComplete="off"
-                    onChange={handleCitySubmit}
-                  />
-                  <button type="submit" className="btn btn-light p-1 mt-2">
-                    Search
-                  </button>
-                  <button
-                    type="submit"
-                    className="btn btn-light p-1 mt-2"
-                    onClick={getCurrentLocation}
-                  >
-                    Current
-                  </button>
-                </form>
-              </div>
-            </div>
+        <div className="col">
+          <WeatherInfo data={weatherData} />
+        </div>
+        <div className="col SearchCity">
+          <div className="card p-3">
+            <form onSubmit={handleSubmit}>
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Type a city name"
+                autoFocus="on"
+                autoComplete="off"
+                onChange={handleCitySubmit}
+              />
+              <button type="submit" className="btn btn-light p-1 mt-2">
+                Search
+              </button>
+              <button
+                type="submit"
+                className="btn btn-light p-1 mt-2"
+                onClick={getCurrentLocation}
+              >
+                Current
+              </button>
+            </form>
           </div>
         </div>
+        <hr />
+        <h3>Next 4 days</h3>
+        <WeatherForecast />
       </div>
     );
   } else {

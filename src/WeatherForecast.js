@@ -1,10 +1,10 @@
 import React from "react";
 
-import "./Forecast.css";
+import "./WeatherForecast.css";
 
-export default function Forecast() {
+export default function WeatherForecast() {
   return (
-    <div className="Forecast">
+    <div className="WeatherForecast">
       <div className="weather-forecast">
         <div className="row row-cols-2  row-cols-md-4 g-2">
           <div className="col">
