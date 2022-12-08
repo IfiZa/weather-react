@@ -45,7 +45,7 @@ canvas {
 }
 
 .unit a {
-  text-decoration: none;
+  color: #212529;
 }
 
 .weather-description {
