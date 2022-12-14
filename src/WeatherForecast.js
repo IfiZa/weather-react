@@ -73,7 +73,7 @@ export default function WeatherForecast(props) {
   } else {
     const lat = props.coordinates.lat;
     const lon = props.coordinates.lon;
-    const apiKey = "4d99823db795b130f19970ddc3b4eb81";
+    const apiKey = "ed55b36e362d8733f7d859247cedeaf2";
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
 
