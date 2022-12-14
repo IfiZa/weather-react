@@ -85,7 +85,7 @@ export default function Weather(props) {
           </form>
         </div>
         <hr />
-        <h3>Next 4 days</h3>
+        <h3>Next 6 days</h3>
         <WeatherForecast coordinates={weatherData.coordinates} />
       </div>
     );

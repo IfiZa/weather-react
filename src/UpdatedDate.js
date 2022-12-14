@@ -20,7 +20,7 @@ export default function UpdatedDate(props) {
     "Nov",
     "Dec",
   ];
-  let month = months[props.date.getMonth()];
+  const month = months[props.date.getMonth()];
   return (
     <div className="UpdatedDate">
       <small>

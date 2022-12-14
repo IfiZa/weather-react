@@ -11,10 +11,6 @@ ul {
   padding: 5px;
 }
 
-canvas {
-  margin-right: 10px;
-}
-
 .weather-main {
   border-radius: 5px;
   box-shadow: 5px 5px 5px rgb(116, 126, 119);
@@ -34,7 +30,7 @@ canvas {
 
 .temperature {
   font-size: 36px;
-  padding: 15px 5px;
+  margin: 0 8px 0 20px;
 }
 
 .unit {
