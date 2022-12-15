@@ -30,7 +30,7 @@ ul {
 
 .temperature {
   font-size: 36px;
-  margin: 0 8px 0 20px;
+  margin: 0 5px 0 20px;
 }
 
 .unit {
@@ -40,15 +40,11 @@ ul {
   top: -16px;
 }
 
-.unit a {
-  color: #212529;
-}
-
 .weather-description {
   text-transform: capitalize;
 }
 
 .humidity,
 .wind {
-  margin-left: 10px;
+  margin-left: 15px;
 }

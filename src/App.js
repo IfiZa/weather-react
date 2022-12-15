@@ -20,16 +20,6 @@ export default function App() {
           GitHub open source code{" "}
         </a>
         by IfiZamb <br />
-        Doodle vector by{" "}
-        <a
-          href="https://www.freepik.com/author/rawpixel-com"
-          target="_blank"
-          alt="Author link"
-          className="vector-source"
-          rel="noreferrer"
-        >
-          Rawpixel
-        </a>
       </div>
     </div>
   );

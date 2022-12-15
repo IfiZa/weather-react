@@ -24,7 +24,7 @@ export default function WeatherForecastDay(props) {
 
   return (
     <div>
-      <div className="card text-center border-light mb-3 h-100 opacity-85">
+      <div className="card text-center border-light mb-1 opacity-85">
         <div className="card-body">
           <h5 className="card-next-day">{nextDay()}</h5>
           <WeatherIcon code={props.data.weather[0].icon} size={40} />
